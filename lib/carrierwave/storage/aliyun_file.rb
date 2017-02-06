@@ -11,7 +11,7 @@ module CarrierWave
 
       def read
         object = bucket.get(@path)
-        @headers = object.headers
+        @headers = object && object.headers
         object
       end
 
